@@ -1,6 +1,6 @@
 # Git Tutorial for Beginners - GitHub Version Control
 
-This git tutorial for beginners will show you how to manage your code using remote repositories on github. I will be showing how to use git and all of its commands. This video is geared towards beginners just learning how to use git as it only shows the basics of git. 
+This git tutorial for beginners will show you how to manage your code using remote repositories on GitHub. I will be showing how to use git and all of its commands. This video is geared towards beginners just learning how to use git as it only shows the basics of git. 
 
 ## Step 1: Installation
 
@@ -27,7 +27,7 @@ cd d:/
 cd 04_coding/Python/00_Projects/00_gitTutorial/gitTutorial/
 ```
 
-Note that we use forward slash (/) as the path separator rather than backward slash in git Bash. Then we can initialize the repository by:
+Note that we use forward slash (/) as the path separator rather than backward slash (\\) in git Bash. Then we can initialize the repository by:
 
 ```bash
 git init
@@ -85,12 +85,6 @@ git status
 ```
 git checkout -- readme.md
 ```
-
-
-
-
-
-
 
 查看git状态命令：
 
@@ -163,6 +157,36 @@ git config --global user.email bin.yang@polymtl.ca
 
 
 
+#### 版本回退
+
+```bash
+git log
+```
+
+or
+
+```
+ git log --pretty=oneline
+```
+
+退回到上一个版本：
+
+```bash
+git reset --hard HEAD^
+```
+
+还可以根据版本号再选择回到最新的版本，如果不记得版本号可以使用`git reflog`查看所有的操作命令及其对应版本号。
+
+```bash
+git reset --hard 62dcc
+```
+
+> Git在内部有个指向当前版本的`HEAD`指针，当你回退版本的时候，Git仅仅是把HEAD从指向`append GPL`，因此实际操作起来速度很快。
+
+
+
+
+
 ## Step 5: Clone a repository to local machine
 
 创建文件夹
@@ -176,7 +200,53 @@ git pull <url>
 
 
 
+## Rename or move files in git[^3]
 
+[^3]:[How to rename or move files in git](https://www.educative.io/edpresso/how-to-rename-or-move-files-in-git)
+
+We can use the **`git mv`** command in git to rename and move files. The syntax is shown below.
+
+### Syntax
+
+#### Rename file
+
+```bash
+git mv <options> oldFilename newFilename
+```
+
+-   `oldFilename`: The name of the file that we rename
+-   `newFilename`: The new name of the file
+
+> **Options**
+>
+> The options we can use with the `mv` command are:
+>
+> -   \[-f\]: Force move or rename operation. Moves or renames the file even if another file of the same name exists.
+> -   \[-n\]: Does not do the actual operation; only shows what would happen.
+> -   \[-k\]: Skips operation that can cause an error.
+> -   \[-v\]: Report the filenames as they are renamed or moved.
+>
+
+
+#### Move file
+
+```bash
+git mv filename foldername
+```
+
+-   `filename`: The name of the file that is moved
+-   `foldername`: The name of the folder where the file is moved
+
+### Code
+
+Consider the code snippet below which demonstrates the use of the `mv` command:
+
+```bash
+git mv file1.txt file2.txt
+git commit -m "file1.txt renamed to file2.txt"
+```
+
+Note that although the code snippet above renames the file `file1.txt` to `file2.txt` using the `mv` command, it actually deletes the file `file1.txt` and creates a new file `file2.txt` that has the same contents as `file1.txt`.
 
 ## Reference:
 
