@@ -110,7 +110,7 @@ git status
 >
 > **Git Bash** emulates a bash environment on windows. It lets you use all git features in command line plus most of [standard unix commands](https://ss64.com/bash/). Useful if you are used to Linux and want to keep the same habits.
 
-## Step 3:
+## Step 3: Create and merge branches
 
 create and switch to the branch named `login`:
 
@@ -155,12 +155,6 @@ git config --global user.email bin.yang@polymtl.ca
 
 
 
-
-
-
-
-
-
 >修改库`url`地址可以使用以下方式:
 >
 >```bash
@@ -169,3 +163,21 @@ git config --global user.email bin.yang@polymtl.ca
 
 
 
+## Step 5: Clone a repository to local machine
+
+创建文件夹
+
+```>
+mkdir chess
+cd chess
+git init
+git pull <url>
+```
+
+
+
+
+
+## Reference:
+
+[Git Tutorial for Beginners - GitHub Version Control - YouTube](https://www.youtube.com/watch?v=PWqS4NBhEY8)
