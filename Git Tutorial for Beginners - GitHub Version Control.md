@@ -109,3 +109,13 @@ git status
 > **Git CMD** is just like regular Windows command prompt with the `git` command. It lets you use all of Git features through command line. Useful if you are already familiar with `Windows cmd` and you only work on Windows.
 >
 > **Git Bash** emulates a bash environment on windows. It lets you use all git features in command line plus most of [standard unix commands](https://ss64.com/bash/). Useful if you are used to Linux and want to keep the same habits.
+
+## Step 3:
+
+create and switch to the branch named `login`:
+
+```bash
+git branch login
+git checkout login
+```
+
