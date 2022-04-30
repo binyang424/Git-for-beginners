@@ -125,9 +125,47 @@ git checkout login
 git branch master
 ```
 
-If we want to merge the changes in branch login to the master, we need to switch to `master` and run:
+If we want to merge the changes in branch login to the master, we need to switch to `master` and simply type:
 
 ```
 git merge login
 ```
+
+## Step 4: Set up a remote repository
+
+注意，`git remote add <name> <url>`中的`<name>`一旦确定，不能更改，对任何分支都是一样的！
+
+```
+git remote add gittutorial https://github.com/binyang424/CollaborationTest.git
+```
+
+使用`git push -u <name> <branch>`将本地内容推送到远程仓库：
+
+```bash
+git push -u gittutorial master
+git push -u gittutorial login
+```
+
+此时，远程仓库里应该有了和本地一样的文件。使用以下方式可以使每次推送都包含推送人的信息：
+
+```bash
+git config --global user.name Bin Yang
+git config --global user.email bin.yang@polymtl.ca
+```
+
+
+
+
+
+
+
+
+
+>修改库`url`地址可以使用以下方式:
+>
+>```bash
+>git remote set-url gittutorial https://github.com/binyang424/test.git
+>```
+
+
 
