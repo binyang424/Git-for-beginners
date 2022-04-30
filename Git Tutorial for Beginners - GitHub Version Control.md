@@ -66,6 +66,20 @@ git commit -m "first change"
 
 ![](https://s2.loli.net/2022/04/30/8qx5vY7kzfAitPZ.png)
 
+删除现有文件(for example, the `readme.md` file)：
+
+```
+git rm --cached readme.md
+git status
+```
+
+we've delete the file and we can commit it to the repository then:
+
+```
+git commit -m "delete readme.md"
+git status
+```
+
 
 
 
