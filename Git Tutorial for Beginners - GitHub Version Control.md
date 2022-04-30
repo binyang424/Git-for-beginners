@@ -49,15 +49,22 @@ Now you should see a hidden folder named `.git` in the target directory if the `
 touch readme.md
 ```
 
-文件创建但并不意味这在repository里面，而是需要将文件添加进去后才能有效执行commit. 我们使用以下命令将目录下所有文件添加进去:
+文件创建但并不意味这在repository里面，而是需要将文件添加进去后才能有效执行commit. 我们使用以下命令将目录下所有文件添加进去并查看git的状态:
 
 ```bash
 git add ./
+git status
 ```
 
+![image-20220429220326378](https://s2.loli.net/2022/04/30/KAbf3pVX5gYIWUr.png)
 
+这是，我们就可以提交修改了：
 
+```bash
+git commit -m "first change"
+```
 
+![](https://s2.loli.net/2022/04/30/8qx5vY7kzfAitPZ.png)
 
 
 
