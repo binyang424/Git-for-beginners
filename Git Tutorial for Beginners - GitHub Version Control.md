@@ -104,7 +104,9 @@ git status
 >
 > **Git Bash** emulates a bash environment on windows. It lets you use all git features in command line plus most of [standard unix commands](https://ss64.com/bash/). Useful if you are used to Linux and want to keep the same habits.
 
-## Step 3: Create and merge branches
+## Step 3: Create and merge branches[^2]
+
+[^2]:[Git Tutorial for Beginners - GitHub Version Control - YouTube](https://www.youtube.com/watch?v=PWqS4NBhEY8)
 
 create and switch to the branch named `login`:
 
@@ -250,4 +252,3 @@ Note that although the code snippet above renames the file `file1.txt` to `file2
 
 ## Reference:
 
-[Git Tutorial for Beginners - GitHub Version Control - YouTube](https://www.youtube.com/watch?v=PWqS4NBhEY8)
