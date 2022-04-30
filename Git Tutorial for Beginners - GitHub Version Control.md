@@ -119,3 +119,15 @@ git branch login
 git checkout login
 ```
 
+此时我们可以在本地文件夹下对文件做任意修改或者创建新文件，并添加and commit to the repository。然后我们在切换回原来的master分支，会发现文件并没有被更改：
+
+```bash
+git branch master
+```
+
+If we want to merge the changes in branch login to the master, we need to switch to `master` and run:
+
+```
+git merge login
+```
+
