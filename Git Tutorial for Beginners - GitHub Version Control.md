@@ -80,6 +80,12 @@ git commit -m "delete readme.md"
 git status
 ```
 
+此时文件夹下的`readme.md`文件已经不被追踪了，但还需要手动删除。如果想还原该文件则可以：
+
+```
+git checkout -- readme.md
+```
+
 
 
 
